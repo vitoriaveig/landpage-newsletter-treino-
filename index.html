@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF -8">
+    <title>XsportOn Landpage</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circulo"></div>
+        <header>
+            <a href="#"><img src="logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navegador">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </header>
+        <div class="conteudo">
+            <div class="textBox">
+                <h2>Melhores ofertas só hoje!</h2>
+                <p>
+                    O XsportOn reúne as melhores promoções das principais lojas da internet na Black Friday. Aqui você encontrar todos o tipo de produtos esportivos em ofertas. Então não deixe de apertar no Inscreva para conseguir as melhores ofertas.
+                </p>
+                <a href="#" onclick="inscrevanews()">INSCREVA</a>
+            </div>
+        
+            <div class="imgBox">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="1.png"></div>
+                      <div class="swiper-slide"><img src="2.png"></div>
+                      <div class="swiper-slide"><img src="3.png"></div>
+                      <div class="swiper-slide"><img src="4.png"></div>
+                      <div class="swiper-slide"><img src="5.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <ul class="redesocial" onclick="rs()">
+            <li><a href="#"><img src="facebook.png"></a></li>
+            <li><a href="#"><img src="twitter.png"></a></li>
+            <li><a href="#"><img src="instagram.png"></a></li>
+        </ul>
+    </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        function inscrevanews(){
+            window.scroll({ top: 2500, left: 0, behavior: 'smooth' });
+        }
+
+        function rs(){
+            window.scroll({ top: 2500, left: 0, behavior: 'smooth' });
+        }
+
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          loop:true,
+        });
+
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.toggle');
+            const navegador = document.querySelector('.navegador')
+            menuToggle.classList.toggle('active')
+            navegador.classList.toggle('active')
+        }
+      </script>
+
+<!----NewsLetter--->
+<section class="newsletter">
+    <div class="newsletter-conteudo">
+        <div>
+            <h3 class="newsletter-titulo">
+                Inscreva-se e Receba <br> 20% e CASHBACK             
+            </h3>
+            <p class="newsletter-descri">
+                Na sua primeira compra, iremos te oferecer <em>20% de desconto</em> e mais <em>Cashback</em>
+            </p>
+        </div>
+        <form action="" class="newsletter-inscreva">
+            <input type="text" placeholder="@email.com" class="newsletter-input">
+            <br>
+            <a href="#" class="botao">Inscreva</a>
+        </form>
+    </div>
+</section>
+    
+</body>
+</html>
